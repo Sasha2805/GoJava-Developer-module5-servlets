@@ -1,6 +1,6 @@
 package com.company.model.entities;
 
-import com.company.hibernate.model.enums.Gender;
+import com.company.model.entities.enums.Gender;
 import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.HashSet;

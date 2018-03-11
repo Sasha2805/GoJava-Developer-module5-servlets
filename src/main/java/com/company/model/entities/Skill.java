@@ -1,9 +1,9 @@
 package com.company.model.entities;
 
+import com.company.model.entities.enums.SkillLevel;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-import com.company.hibernate.model.enums.SkillLevel;
 import lombok.Getter;
 import lombok.Setter;
 
