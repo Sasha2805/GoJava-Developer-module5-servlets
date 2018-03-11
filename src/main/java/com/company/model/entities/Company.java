@@ -5,9 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name = "companies")
 public class Company {
@@ -35,14 +37,5 @@ public class Company {
     public Company(String name, String info) {
         this.name = name;
         this.info = info;
-    }
-
-    @Override
-    public String toString() {
-        return "Company{" +
-                "id = " + id +
-                ", name = '" + name + '\'' +
-                ", info = '" + info + '\'' +
-                '}';
     }
 }

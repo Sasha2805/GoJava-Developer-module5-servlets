@@ -5,9 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name = "customers")
 public class Customer {
@@ -39,15 +41,5 @@ public class Customer {
         this.firstName = firstName;
         this.lastName = lastName;
         this.info = info;
-    }
-
-    @Override
-    public String toString() {
-        return "CustomerDaoImpl{" +
-                "id = " + id +
-                ", firstName = '" + firstName + '\'' +
-                ", lastName = '" + lastName + '\'' +
-                ", info = '" + info + '\'' +
-                '}';
     }
 }

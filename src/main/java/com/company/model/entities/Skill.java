@@ -6,9 +6,11 @@ import java.util.HashSet;
 import java.util.Set;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 @Entity
 @Table(name = "skills")
 public class Skill {
@@ -37,14 +39,5 @@ public class Skill {
     public Skill(String skill, SkillLevel skillLevel) {
         this.skill = skill;
         this.skillLevel = skillLevel;
-    }
-
-    @Override
-    public String toString() {
-        return "Skill{" +
-                "id = " + id +
-                ", skill = '" + skill + '\'' +
-                ", skillLevel = '" + skillLevel + '\'' +
-                '}';
     }
 }
