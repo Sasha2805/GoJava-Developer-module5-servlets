@@ -28,26 +28,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <%
-                        List<Developer> developers = (ArrayList<Developer>) request.getAttribute("developers");
-                        for(Developer developer: developers){
-                            String id = developer.getId().toString();
-                            String firstName = developer.getFirstName();
-                            String lastName = developer.getLastName();
-                            String age = developer.getAge().toString();
-                            String gender = developer.getGender().toString();
-                            BigDecimal salary = developer.getSalary();
+                <%
+                    List<Developer> developers = (ArrayList<Developer>) request.getAttribute("developers");
+                    for(Developer developer: developers){
+                        String id = developer.getId().toString();
+                        String firstName = developer.getFirstName();
+                        String lastName = developer.getLastName();
+                        String age = developer.getAge().toString();
+                        String gender = developer.getGender().toString();
+                        BigDecimal salary = developer.getSalary();
 
-                            out.println("<tr>");
-                            out.println("<td>" + id + "</td>");
-                            out.println("<td>" + firstName + "</td>");
-                            out.println("<td>" + lastName + "</td>");
-                            out.println("<td>" + age + "</td>");
-                            out.println("<td>" + gender + "</td>");
-                            out.println("<td>" + salary + "</td>");
-                            out.println("</tr>");
-                        }
-                    %>
+                        out.println("<tr>");
+                        out.println("<td>" + id + "</td>");
+                        out.println("<td>" + firstName + "</td>");
+                        out.println("<td>" + lastName + "</td>");
+                        out.println("<td>" + age + "</td>");
+                        out.println("<td>" + gender + "</td>");
+                        out.println("<td>" + salary + "</td>");
+                        out.println("</tr>");
+                    }
+                %>
                 </tbody>
             </table>
         </div>

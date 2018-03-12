@@ -14,7 +14,7 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>List of all customers</h4>
+        <h4>List of all projects</h4>
         <div class="table-container">
             <table border="1">
                 <thead>
