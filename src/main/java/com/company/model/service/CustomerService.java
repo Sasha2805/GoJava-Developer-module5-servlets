@@ -5,7 +5,7 @@ import com.company.model.entities.Customer;
 import com.company.model.entities.Project;
 import java.util.List;
 
-public class CustomerServise {
+public class CustomerService {
     private CustomerDaoImpl customerDao = new CustomerDaoImpl();
 
     public void addCustomer(Customer customer){
