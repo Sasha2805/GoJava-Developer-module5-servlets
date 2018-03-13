@@ -1,11 +1,10 @@
-<%@ page import="com.company.model.entities.Skill"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.List"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.company.model.entities.Skill" %>
 
 <html>
 <head>
     <meta content="text/html; charset=UTF-8">
-    <title>All developers</title>
+    <title>All skills</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
@@ -16,29 +15,18 @@
         <h4>List of all skills</h4>
         <div class="table-container">
             <table border="1">
-                <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>Skill</td>
-                        <td>Skill level</td>
-                    </tr>
-                </thead>
-                <tbody>
-                <%
-                    List<Skill> skills = (ArrayList<Skill>) request.getAttribute("skills");
-                    for(Skill skill: skills){
-                        String id = skill.getId().toString();
-                        String skillName = skill.getSkill();
-                        String skillLevel = skill.getSkillLevel().toString();
-
-                        out.println("<tr>");
-                        out.println("<td>" + id + "</td>");
-                        out.println("<td>" + skillName + "</td>");
-                        out.println("<td>" + skillLevel + "</td>");
-                        out.println("</tr>");
-                    }
-                %>
-                </tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>Skill</td>
+                    <td>Skill level</td>
+                </tr>
+                <c:forEach var="skill" items="${skills}">
+                <tr>
+                    <td><c:out value="${skill.id}"/></td>
+                    <td><c:out value="${skill.skill}"/></td>
+                    <td><c:out value="${skill.skillLevel}"/></td>
+                </tr>
+                </c:forEach>
             </table>
         </div>
     </div>

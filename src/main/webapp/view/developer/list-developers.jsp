@@ -1,7 +1,5 @@
-<%@ page import="com.company.model.entities.Developer"%>
-<%@ page import="java.math.BigDecimal"%>
-<%@ page import="java.util.ArrayList"%>
-<%@ page import="java.util.List"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.company.model.entities.Developer" %>
 
 <html>
 <head>
@@ -17,38 +15,24 @@
         <h4>List of all developers</h4>
         <div class="table-container">
             <table border="1">
-                <thead>
-                    <tr>
-                        <td>Id</td>
-                        <td>First name</td>
-                        <td>Last name</td>
-                        <td>Age</td>
-                        <td>Gender</td>
-                        <td>Salary</td>
-                    </tr>
-                </thead>
-                <tbody>
-                <%
-                    List<Developer> developers = (ArrayList<Developer>) request.getAttribute("developers");
-                    for(Developer developer: developers){
-                        String id = developer.getId().toString();
-                        String firstName = developer.getFirstName();
-                        String lastName = developer.getLastName();
-                        String age = developer.getAge().toString();
-                        String gender = developer.getGender().toString();
-                        BigDecimal salary = developer.getSalary();
-
-                        out.println("<tr>");
-                        out.println("<td>" + id + "</td>");
-                        out.println("<td>" + firstName + "</td>");
-                        out.println("<td>" + lastName + "</td>");
-                        out.println("<td>" + age + "</td>");
-                        out.println("<td>" + gender + "</td>");
-                        out.println("<td>" + salary + "</td>");
-                        out.println("</tr>");
-                    }
-                %>
-                </tbody>
+                <tr>
+                    <td>Id</td>
+                    <td>First name</td>
+                    <td>Last name</td>
+                    <td>Age</td>
+                    <td>Gender</td>
+                    <td>Salary</td>
+                </tr>
+                <c:forEach var="developer" items="${developers}">
+                <tr>
+                    <td><c:out value="${developer.id}"/></td>
+                    <td><c:out value="${developer.firstName}"/></td>
+                    <td><c:out value="${developer.lastName}"/></td>
+                    <td><c:out value="${developer.age}"/></td>
+                    <td><c:out value="${developer.gender}"/></td>
+                    <td><c:out value="${developer.salary}"/></td>
+                </tr>
+                </c:forEach>
             </table>
         </div>
     </div>
