@@ -20,9 +20,9 @@
                 <div class="form-group">
                     <label for="skillLevel">Skill level</label>
                     <select class="form-control" name="skillLevel">
-                      <option value="JUNIOR">Junior</option>
-                      <option value="MIDDLE">Middle</option>
-                      <option value="SENIOR">Senior</option>
+                        <option value="JUNIOR">Junior</option>
+                        <option value="MIDDLE">Middle</option>
+                        <option value="SENIOR">Senior</option>
                     </select>
                   </div>
                 <button type="submit" class="btn btn-primary">Execute</button>
