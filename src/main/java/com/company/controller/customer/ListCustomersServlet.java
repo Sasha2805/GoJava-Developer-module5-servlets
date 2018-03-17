@@ -1,4 +1,4 @@
-package com.company.controller.servlets.customer;
+package com.company.controller.customer;
 
 import com.company.model.entities.Customer;
 import com.company.model.service.CustomerService;

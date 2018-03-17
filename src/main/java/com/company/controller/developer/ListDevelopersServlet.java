@@ -1,4 +1,4 @@
-package com.company.controller.servlets.developer;
+package com.company.controller.developer;
 
 import com.company.model.entities.Developer;
 import com.company.model.service.DeveloperService;

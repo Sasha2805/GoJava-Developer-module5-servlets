@@ -1,4 +1,4 @@
-package com.company.controller.servlets.skill;
+package com.company.controller.skill;
 
 import com.company.model.entities.Skill;
 import com.company.model.service.SkillService;

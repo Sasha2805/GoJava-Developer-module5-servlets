@@ -1,4 +1,4 @@
-package com.company.controller.servlets.company;
+package com.company.controller.company;
 
 import com.company.model.entities.Company;
 import com.company.model.service.CompanyService;

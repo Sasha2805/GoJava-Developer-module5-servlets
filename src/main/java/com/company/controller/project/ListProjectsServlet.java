@@ -1,4 +1,4 @@
-package com.company.controller.servlets.project;
+package com.company.controller.project;
 
 import com.company.model.entities.Project;
 import com.company.model.service.ProjectService;
