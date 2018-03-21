@@ -10,23 +10,25 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>Add customer</h4>
-        <div class="form-container">
-            <form action="${pageContext.request.contextPath}/add-customer" method="POST">
-                <div class="form-group">
-                    <label for="customerFirstName">First name</label>
-                    <input type="text" class="form-control" name="customerFirstName" placeholder="Customer first name">
-                </div>
-                <div class="form-group">
-                    <label for="customerLastName">Last name</label>
-                    <input type="text" class="form-control" name="customerLastName" placeholder="Customer last name">
-                </div>
-                <div class="form-group">
-                    <label for="customerInfo">Customer info</label>
-                    <textarea class="form-control" name="customerInfo" rows="3"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Execute</button>
-            </form>
+        <div class="block block-form">
+            <h4>Add customer</h4>
+            <div class="form-container">
+                <form action="${pageContext.request.contextPath}/add-customer" method="POST">
+                    <div class="form-group">
+                        <label for="customerFirstName">First name</label>
+                        <input type="text" class="form-control" name="customerFirstName" placeholder="Customer first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerLastName">Last name</label>
+                        <input type="text" class="form-control" name="customerLastName" placeholder="Customer last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerInfo">Customer info</label>
+                        <textarea class="form-control" name="customerInfo" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Execute</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

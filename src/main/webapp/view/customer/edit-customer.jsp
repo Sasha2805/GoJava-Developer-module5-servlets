@@ -11,30 +11,32 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>Edit customer</h4>
-        <div class="form-container">
-            <form action="${pageContext.request.contextPath}/edit-customer" method="POST">
-                <div class="form-group">
-                    <label for="customerId">Id</label>
-                    <input type="text" class="form-control" name="customerId" placeholder="Customer id"
-                        value="${customer.id}"/>
-                </div>
-                <div class="form-group">
-                    <label for="customerFirstName">First name</label>
-                    <input type="text" class="form-control" name="customerFirstName" placeholder="Customer first name"
-                        value="${customer.firstName}"/>
-                </div>
-                <div class="form-group">
-                    <label for="customerLastName">Last name</label>
-                    <input type="text" class="form-control" name="customerLastName" placeholder="Customer last name"
-                        value="${customer.lastName}"/>
-                </div>
-                <div class="form-group">
-                    <label for="customerInfo">Customer info</label>
-                    <textarea class="form-control" name="customerInfo" rows="3">${customer.info}</textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Execute</button>
-            </form>
+        <div class="block block-form">
+            <h4>Edit customer</h4>
+            <div class="form-container">
+                <form action="${pageContext.request.contextPath}/edit-customer" method="POST">
+                    <div class="form-group">
+                        <label for="customerId">Id</label>
+                        <input type="text" class="form-control" name="customerId" placeholder="Customer id"
+                            value="${customer.id}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerFirstName">First name</label>
+                        <input type="text" class="form-control" name="customerFirstName" placeholder="Customer first name"
+                            value="${customer.firstName}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerLastName">Last name</label>
+                        <input type="text" class="form-control" name="customerLastName" placeholder="Customer last name"
+                            value="${customer.lastName}"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="customerInfo">Customer info</label>
+                        <textarea class="form-control" name="customerInfo" rows="3">${customer.info}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Execute</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

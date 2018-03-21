@@ -13,28 +13,32 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>List of all customers</h4>
-        <div class="table-container">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">First name</th>
-                        <th scope="col">Last name</th>
-                        <th scope="col">Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="customer" items="${customers}">
-                    <tr>
-                        <td><c:out value="${customer.id}"/></td>
-                        <td><c:out value="${customer.firstName}"/></td>
-                        <td><c:out value="${customer.lastName}"/></td>
-                        <td><c:out value="${customer.info}"/></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="block block-table">
+            <h4>List of all customers</h4>
+            <div class="table-container">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Info</th>
+                            <th scope="col">Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="customer" items="${customers}">
+                        <tr>
+                            <td><c:out value="${customer.id}"/></td>
+                            <td><c:out value="${customer.firstName}"/></td>
+                            <td><c:out value="${customer.lastName}"/></td>
+                            <td><c:out value="${customer.info}"/></td>
+                            <td><a href="/MyWebApp/customer-projects?customerId=${customer.id}">view</a></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

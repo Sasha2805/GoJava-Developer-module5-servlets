@@ -10,15 +10,17 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>Delete company</h4>
-        <div class="form-container">
-            <form action="${pageContext.request.contextPath}/delete-company" method="POST">
-                <div class="form-group">
-                    <label for="companyId">Id</label>
-                    <input type="text" class="form-control" name="companyId" placeholder="Company id">
-                </div>
-                <button type="submit" class="btn btn-primary">Execute</button>
-            </form>
+        <div class="block block-form">
+            <h4>Delete company</h4>
+            <div class="form-container">
+                <form action="${pageContext.request.contextPath}/delete-company" method="POST">
+                    <div class="form-group">
+                        <label for="companyId">Id</label>
+                        <input type="text" class="form-control" name="companyId" placeholder="Company id">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Execute</button>
+                </form>
+            </div>
         </div>
     </div>
 </div>

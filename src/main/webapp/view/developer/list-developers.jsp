@@ -13,32 +13,38 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>List of all developers</h4>
-        <div class="table-container">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">First name</th>
-                        <th scope="col">Last name</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Gender</th>
-                        <th scope="col">Salary</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="developer" items="${developers}">
-                    <tr>
-                        <td><c:out value="${developer.id}"/></td>
-                        <td><c:out value="${developer.firstName}"/></td>
-                        <td><c:out value="${developer.lastName}"/></td>
-                        <td><c:out value="${developer.age}"/></td>
-                        <td><c:out value="${developer.gender}"/></td>
-                        <td><c:out value="${developer.salary}"/></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="block block-table">
+            <h4>List of all developers</h4>
+            <div class="table-container">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">First name</th>
+                            <th scope="col">Last name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Salary</th>
+                            <th scope="col">Skills</th>
+                            <th scope="col">Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="developer" items="${developers}">
+                        <tr>
+                            <td><c:out value="${developer.id}"/></td>
+                            <td><c:out value="${developer.firstName}"/></td>
+                            <td><c:out value="${developer.lastName}"/></td>
+                            <td><c:out value="${developer.age}"/></td>
+                            <td><c:out value="${developer.gender}"/></td>
+                            <td><c:out value="${developer.salary}"/></td>
+                            <td><a href="/MyWebApp/developer-skills?developerId=${developer.id}">view</a></td>
+                            <td><a href="/MyWebApp/developer-projects?developerId=${developer.id}">view</a></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

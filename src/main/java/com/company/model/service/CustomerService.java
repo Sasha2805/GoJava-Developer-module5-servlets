@@ -28,7 +28,7 @@ public class CustomerService {
         customerDao.update(customer);
     }
 
-    public void addProjectToCompany(Long customerId, Project project){
+    public void addProjectToCustomer(Long customerId, Project project){
         Customer customer = getCustomerById(customerId);
         customer.getProjects().add(project);
         updateCustomer(customer);

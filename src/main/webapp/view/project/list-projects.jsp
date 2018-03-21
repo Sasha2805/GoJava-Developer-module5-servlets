@@ -13,28 +13,36 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>List of all projects</h4>
-        <div class="table-container">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Info</th>
-                        <th scope="col">Cost</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="project" items="${projects}">
-                    <tr>
-                        <td><c:out value="${project.id}"/></td>
-                        <td><c:out value="${project.name}"/></td>
-                        <td><c:out value="${project.info}"/></td>
-                        <td><c:out value="${project.cost}"/></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="block block-table">
+            <h4>List of all projects</h4>
+            <div class="table-container">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Info</th>
+                            <th scope="col">Cost</th>
+                            <th scope="col">Developers</th>
+                            <th scope="col">Companies</th>
+                            <th scope="col">Customers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="project" items="${projects}">
+                        <tr>
+                            <td><c:out value="${project.id}"/></td>
+                            <td><c:out value="${project.name}"/></td>
+                            <td><c:out value="${project.info}"/></td>
+                            <td><c:out value="${project.cost}"/></td>
+                            <td><a href="/MyWebApp/project-developers?projectId=${project.id}">view</a></td>
+                            <td><a href="/MyWebApp/project-companies?projectId=${project.id}">view</a></td>
+                            <td><a href="/MyWebApp/project-customers?projectId=${project.id}">view</a></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

@@ -13,26 +13,30 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>List of all skills</h4>
-        <div class="table-container">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Skill</th>
-                        <th scope="col">Skill level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="skill" items="${skills}">
-                    <tr>
-                        <td><c:out value="${skill.id}"/></td>
-                        <td><c:out value="${skill.skill}"/></td>
-                        <td><c:out value="${skill.skillLevel}"/></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="block block-table">
+            <h4>List of all skills</h4>
+            <div class="table-container">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Skill</th>
+                            <th scope="col">Skill level</th>
+                            <th scope="col">Developers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="skill" items="${skills}">
+                        <tr>
+                            <td><c:out value="${skill.id}"/></td>
+                            <td><c:out value="${skill.skill}"/></td>
+                            <td><c:out value="${skill.skillLevel}"/></td>
+                            <td><a href="/MyWebApp/skill-developers?skillId=${skill.id}">view</a></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>

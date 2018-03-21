@@ -13,26 +13,30 @@
 <body>
 <div class="wrapper">
     <div class="container">
-        <h4>List of all companies</h4>
-        <div class="table-container">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Info</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="company" items="${companies}">
-                    <tr>
-                        <td><c:out value="${company.id}"/></td>
-                        <td><c:out value="${company.name}"/></td>
-                        <td><c:out value="${company.info}"/></td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+        <div class="block block-table">
+            <h4>List of all companies</h4>
+            <div class="table-container">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Info</th>
+                            <th scope="col">Projects</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="company" items="${companies}">
+                        <tr>
+                            <td><c:out value="${company.id}"/></td>
+                            <td><c:out value="${company.name}"/></td>
+                            <td><c:out value="${company.info}"/></td>
+                            <td><a href="/MyWebApp/company-projects?companyId=${company.id}">view</a></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
