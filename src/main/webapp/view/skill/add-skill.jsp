@@ -13,21 +13,23 @@
         <div class="block block-form">
             <h4>Add skill</h4>
             <div class="form-container">
-                <form action="${pageContext.request.contextPath}/add-skill" method="POST">
-                    <div class="form-group">
-                        <label for="skillName">Skill</label>
-                        <input type="text" class="form-control" name="skillName" placeholder="Skill name">
-                    </div>
-                    <div class="form-group">
-                        <label for="skillLevel">Skill level</label>
-                        <select class="form-control" name="skillLevel">
-                            <option value="JUNIOR">Junior</option>
-                            <option value="MIDDLE">Middle</option>
-                            <option value="SENIOR">Senior</option>
-                        </select>
-                      </div>
-                    <button type="submit" class="btn btn-primary">Execute</button>
-                </form>
+                <div class="form">
+                    <form action="${pageContext.request.contextPath}/add-skill" method="POST">
+                        <div class="form-group">
+                            <label for="skillName">Skill</label>
+                            <input type="text" class="form-control" name="skillName" placeholder="Skill name">
+                        </div>
+                        <div class="form-group">
+                            <label for="skillLevel">Skill level</label>
+                            <select class="form-control" name="skillLevel">
+                                <option value="JUNIOR">Junior</option>
+                                <option value="MIDDLE">Middle</option>
+                                <option value="SENIOR">Senior</option>
+                            </select>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Execute</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

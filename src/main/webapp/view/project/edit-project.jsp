@@ -14,29 +14,31 @@
         <div class="block block-form">
             <h4>Edit project</h4>
             <div class="form-container">
-                <form action="${pageContext.request.contextPath}/edit-project" method="POST">
-                    <div class="form-group">
-                        <label for="projectId">Id</label>
-                        <input type="text" class="form-control" name="projectId" placeholder="Project id"
-                            value="${project.id}"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="projectName">Name</label>
-                        <input type="text" class="form-control" name="projectName" placeholder="Project name"
-                            value="${project.name}"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="projectInfo">Info</label>
-                        <input type="text" class="form-control" name="projectInfo" placeholder="Project info"
-                            value="${project.info}"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="projectCost">Cost</label>
-                        <input type="text" class="form-control" name="projectCost" placeholder="Project cost"
-                            value="${project.cost}"/>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Execute</button>
-                </form>
+                <div class="form">
+                    <form action="${pageContext.request.contextPath}/edit-project" method="POST">
+                        <div class="form-group">
+                            <label for="projectId">Id</label>
+                            <input type="text" class="form-control" name="projectId" placeholder="Project id"
+                                value="${project.id}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectName">Name</label>
+                            <input type="text" class="form-control" name="projectName" placeholder="Project name"
+                                value="${project.name}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectInfo">Info</label>
+                            <input type="text" class="form-control" name="projectInfo" placeholder="Project info"
+                                value="${project.info}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectCost">Cost</label>
+                            <input type="text" class="form-control" name="projectCost" placeholder="Project cost"
+                                value="${project.cost}"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Execute</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

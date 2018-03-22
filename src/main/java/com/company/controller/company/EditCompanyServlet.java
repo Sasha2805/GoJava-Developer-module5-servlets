@@ -3,13 +3,11 @@ package com.company.controller.company;
 import com.company.model.entities.Company;
 import com.company.model.service.CompanyService;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/edit-company")
 public class EditCompanyServlet extends HttpServlet {
     private CompanyService companyService = new CompanyService();
 
@@ -30,4 +28,6 @@ public class EditCompanyServlet extends HttpServlet {
         companyService.updateCompany(company);
         resp.sendRedirect("/MyWebApp/list-companies");
     }
+
+
 }

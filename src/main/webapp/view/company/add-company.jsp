@@ -13,17 +13,19 @@
         <div class="block block-form">
             <h4>Add company</h4>
             <div class="form-container">
-                <form action="${pageContext.request.contextPath}/add-company" method="POST">
-                    <div class="form-group">
-                        <label for="companyName">Company name</label>
-                        <input type="text" class="form-control" name="companyName" placeholder="Company name">
-                    </div>
-                    <div class="form-group">
-                        <label for="companyInfo">Company info</label>
-                        <textarea class="form-control" name="companyInfo" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Execute</button>
-                </form>
+                <div class="form">
+                    <form action="${pageContext.request.contextPath}/add-company" method="POST">
+                        <div class="form-group">
+                            <label for="companyName">Company name</label>
+                            <input type="text" class="form-control" name="companyName" placeholder="Company name">
+                        </div>
+                        <div class="form-group">
+                            <label for="companyInfo">Company info</label>
+                            <textarea class="form-control" name="companyInfo" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Execute</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

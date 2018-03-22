@@ -3,13 +3,11 @@ package com.company.controller.customer;
 import com.company.model.entities.Customer;
 import com.company.model.service.CustomerService;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/edit-customer")
 public class EditCustomerServlet extends HttpServlet {
     private CustomerService customerService = new CustomerService();
 

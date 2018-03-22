@@ -4,14 +4,12 @@ import com.company.model.entities.Developer;
 import com.company.model.entities.enums.Gender;
 import com.company.model.service.DeveloperService;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
 
-@WebServlet("/edit-developer")
 public class EditDeveloperServlet extends HttpServlet {
     private DeveloperService developerService = new DeveloperService();
 

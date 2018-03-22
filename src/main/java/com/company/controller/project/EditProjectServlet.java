@@ -3,14 +3,12 @@ package com.company.controller.project;
 import com.company.model.entities.Project;
 import com.company.model.service.ProjectService;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigDecimal;
 
-@WebServlet("/edit-project")
 public class EditProjectServlet extends HttpServlet {
     private ProjectService projectService = new ProjectService();
 

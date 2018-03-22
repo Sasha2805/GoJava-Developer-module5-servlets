@@ -13,13 +13,15 @@
         <div class="block block-form">
             <h4>Delete skill</h4>
             <div class="form-container">
-                <form action="${pageContext.request.contextPath}/delete-skill" method="POST">
-                    <div class="form-group">
-                        <label for="skillId">Id</label>
-                        <input type="text" class="form-control" name="skillId" placeholder="Skill id">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Execute</button>
-                </form>
+                <div class="form">
+                    <form action="${pageContext.request.contextPath}/delete-skill" method="POST">
+                        <div class="form-group">
+                            <label for="skillId">Id</label>
+                            <input type="text" class="form-control" name="skillId" placeholder="Skill id">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Execute</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

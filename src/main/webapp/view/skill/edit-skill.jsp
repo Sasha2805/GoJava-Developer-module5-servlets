@@ -14,27 +14,29 @@
         <div class="block block-form">
             <h4>Edit skill</h4>
             <div class="form-container">
-                <form action="${pageContext.request.contextPath}/edit-skill" method="POST">
-                    <div class="form-group">
-                        <label for="skillId">Id</label>
-                        <input type="text" class="form-control" name="skillId" placeholder="Skill id"
-                            value="${skill.id}"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="skillName">Skill</label>
-                        <input type="text" class="form-control" name="skillName" placeholder="Skill name"
-                            value="${skill.skill}"/>
-                    </div>
-                    <div class="form-group">
-                        <label for="skillLevel">Skill level</label>
-                        <select class="form-control" name="skillLevel">
-                            <option value="JUNIOR" ${skill.skillLevel == 'JUNIOR' ? 'selected' : ''}>Junior</option>
-                            <option value="MIDDLE" ${skill.skillLevel == 'MIDDLE' ? 'selected' : ''}>Middle</option>
-                            <option value="SENIOR" ${skill.skillLevel == 'SENIOR' ? 'selected' : ''}>Senior</option>
-                        </select>
-                      </div>
-                    <button type="submit" class="btn btn-primary">Execute</button>
-                </form>
+                <div class="form">
+                    <form action="${pageContext.request.contextPath}/edit-skill" method="POST">
+                        <div class="form-group">
+                            <label for="skillId">Id</label>
+                            <input type="text" class="form-control" name="skillId" placeholder="Skill id"
+                                value="${skill.id}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="skillName">Skill</label>
+                            <input type="text" class="form-control" name="skillName" placeholder="Skill name"
+                                value="${skill.skill}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="skillLevel">Skill level</label>
+                            <select class="form-control" name="skillLevel">
+                                <option value="JUNIOR" ${skill.skillLevel == 'JUNIOR' ? 'selected' : ''}>Junior</option>
+                                <option value="MIDDLE" ${skill.skillLevel == 'MIDDLE' ? 'selected' : ''}>Middle</option>
+                                <option value="SENIOR" ${skill.skillLevel == 'SENIOR' ? 'selected' : ''}>Senior</option>
+                            </select>
+                          </div>
+                        <button type="submit" class="btn btn-primary">Execute</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
